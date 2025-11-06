@@ -12,10 +12,8 @@
   - **Commands used:** git add README.md; git commit -m "merge: keep both Alpha and Beta edits in readme.md"; git push
 
 
-![alt text](image-1.png)
+<img width="1067" height="363" alt="Screenshot from 2025-11-07 04-58-20" src="https://github.com/user-attachments/assets/9f7930e0-b90d-4391-8399-7a3df5c9cf81" />
 
+<img width="1143" height="333" alt="Screenshot from 2025-11-07 05-00-10" src="https://github.com/user-attachments/assets/2a801d47-8b69-4d1a-9835-2208789f0ebe" />
 
-![alt text](image-2.png)
-
-
-![alt text](image.png)# MERGE POSTMORTEM
+<img width="1144" height="999" alt="Screenshot from 2025-11-07 04-31-13" src="https://github.com/user-attachments/assets/dd753665-8456-409c-90f1-eb5f17a25836" />
