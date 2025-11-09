@@ -1,6 +1,9 @@
-# Dependencies
 node_modules/
 
-# Ignore dependency metadata
+logs/
+
+*.log
+
 package.json
+
 package-lock.json
