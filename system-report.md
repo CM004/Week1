@@ -1,79 +1,177 @@
-To_identify:
-  1.a_OS_version:
-    INPUT: |
-      cat /etc/os-release
-    OUTPUT: |
-      ![alt text](1.png)
-    NOTE: |
-      cat is used to concatenate and display contents of a file.
-      /etc/os-release is the system file that stores info about the OS.
-    RESULT: |
-      VERSION="24.04.3 LTS (Noble Numbat)" (Version + Codename)
-  1.b_Current_shell:
-    INPUT: |
-      echo $SHELL
-    OUTPUT: |
-      ![alt text](2.png)
-    NOTE: |
-      echo outputs the value of a variable.
-      $SHELL is a special environment variable that stores the path of the current shell.
-    RESULT: |
-      Using the Bash shell (located at /bin/bash)
-  1.c_Node_binary_path:
-    INPUT: |
-      which node
-    OUTPUT: |
-      ![alt text](3.png)
-    NOTE: |
-      which tells location of the executable.
-      node is the name of the Node.js executable.
-    RESULT: |
-      Node executable is located in the /home/chandramohan/.nvm/versions/node/v24.11.0/bin/ directory.
-  1.d_NPM_global_installation_path:
-    INPUT: |
-      npm root -g
-    OUTPUT: |
-      ![alt text](4.png)
-    NOTE: |
-      npm is used to interact with the Node Package Manager.
-      root -g tells npm to print the directory where global packages are installed.
-    RESULT: |
-      Global npm packages are installed in the /home/chandramohan/.nvm/versions/node/v24.11.0/lib/node_modules directory.
-  1.e_PATH_entries_with_node_or_npm:
-    INPUT: |
-      for path in $(echo $PATH | tr ':' '\n'); do
-        ls "$path" | grep -i 'node\|npm'
-      done
-    OUTPUT: |
-      ![alt text](5.png)
-    NOTE: |
-      The loop breaks $PATH into directories and lists those containing node or npm executables.
-      If nvm is not installed and Node.js/npm are not in PATH, no output would be printed.
-    RESULT: |
-      Multiple node-related binaries are found — main active version path is:
-      /home/chandramohan/.nvm/versions/node/v24.11.0/bin/
-  2.a._Installed_Node_and_NVM_versions:
-    INPUT: |
-      nvm ls
-    OUTPUT: |
-      ->     v24.11.0
-             v25.1.0
-      default -> lts/* (-> v24.11.0)
-      node -> stable (-> v25.1.0) (default)
-      lts/* -> lts/krypton (-> v24.11.0)
-    NOTE: |
-      nvm ls lists all installed Node.js versions and shows which one is currently active.
-    RESULT: |
-      Active Node.js version: v24.11.0 (LTS Krypton)
-      Installed versions: v24.11.0 and v25.1.0
-  2.b._Verify_NVM_installation:
-    INPUT: |
-      command -v nvm
-    OUTPUT: |
-      nvm
-    NOTE: |
-      This confirms that NVM is correctly installed and accessible from the terminal.
-    RESULT: |
-      NVM is installed and working correctly.
+# Week 1 - Node.js and Terminal Mastering
 
+## 📋 Table of Contents
+- [1. System Identification](#1-system-identification)
+- [2. Node.js and NVM](#2-nodejs-and-nvm)
+- [3. introspect.js Script](#3-introspectjs-script)
+- [4. STREAM vs BUFFER Exercise](#4-stream-vs-buffer-exercise)
 
+---
+
+## 1. System Identification
+
+### 1.a. OS Version
+**INPUT:** `cat /etc/os-release`
+
+**NOTES:** `cat` displays file contents. `/etc/os-release` stores OS info.
+
+**RESULT:** VERSION="24.04.3 LTS (Noble Numbat)"
+
+---
+
+### 1.b. Current Shell
+**INPUT:** `echo $SHELL`
+
+**NOTES:** `echo` outputs variable value. `$SHELL` stores current shell path.
+
+**RESULT:** Using Bash shell at /bin/bash
+
+---
+
+### 1.c. Node Binary Path
+**INPUT:** `which node`
+
+**NOTES:** `which` shows executable location.
+
+**RESULT:** /home/chandramohan/.nvm/versions/node/v24.11.0/bin/node
+
+---
+
+### 1.d. NPM Global Installation Path
+**INPUT:** `npm root -g`
+
+**NOTES:** `npm root -g` prints global packages directory.
+
+**RESULT:** /home/chandramohan/.nvm/versions/node/v24.11.0/lib/node_modules
+
+---
+
+### 1.e. PATH Entries with Node or NPM
+**INPUT:**
+```bash
+for path in $(echo $PATH | tr ':' '\n'); do
+  ls "$path" | grep -i 'node\|npm'
+done
+```
+
+**NOTES:** Loop breaks $PATH into directories and lists those containing node/npm executables.
+
+**RESULT:** Main active version: /home/chandramohan/.nvm/versions/node/v24.11.0/bin/
+
+---
+
+## 2. Node.js and NVM
+
+### 2.a. Installed Node and NVM Versions
+**INPUT:** `nvm ls`
+
+**OUTPUT:**
+```
+->     v24.11.0
+       v25.1.0
+default -> lts/* (-> v24.11.0)
+```
+
+**NOTES:** `nvm ls` lists all installed Node.js versions and shows active one.
+
+**RESULT:** Active: v24.11.0 (LTS Krypton), Installed: v24.11.0 and v25.1.0
+
+---
+
+### 2.b. Verify NVM Installation
+**INPUT:** `command -v nvm`
+
+**OUTPUT:** `nvm`
+
+**NOTES:** Confirms NVM is installed and accessible.
+
+**RESULT:** NVM is working correctly.
+
+---
+
+## 3. introspect.js Script
+
+**Create file:** `nano introspect.js`
+
+**Code:**
+```javascript
+const os = require('os');
+const process = require('process');
+
+console.log(`OS: ${os.type()} ${os.release()}`);
+console.log(`Architecture: ${os.arch()}`);
+console.log(`CPU Cores: ${os.availableParallelism()}`);
+console.log(`Total Memory: ${(os.totalmem())} bytes`);
+console.log(`System Uptime: ${(os.uptime())} seconds`);
+console.log(`Current Logged User: ${os.userInfo().username}`);
+console.log(`Node Path: ${process.execPath}`);
+```
+
+**Save:** CTRL+O → Enter → CTRL+X
+
+**Run:** `node introspect.js`
+
+---
+
+## 4. STREAM vs BUFFER Exercise
+
+### Step A: Generate Test File
+**INPUT:** `dd if=/dev/urandom of=largefile.txt bs=1M count=50`
+
+**NOTES:** `dd` copies data. `if=/dev/urandom` uses random data. `bs=1M` sets 1MB blocks. `count=50` creates 50MB file.
+
+---
+
+### Step B: Create Benchmark Script
+**Create:** `nano readFileBenchmark.js`
+
+**Code:**
+```javascript
+const fs = require('fs');
+
+function readFileWithBuffer() {
+    const startTime = Date.now();
+    fs.readFile('largefile.txt', (err, data) => {
+        if (err) throw err;
+        const endTime = Date.now();
+        const memoryUsage = process.memoryUsage();
+        console.log('\n=== Buffer Method ===');
+        console.log(`Time: ${endTime - startTime}ms`);
+        console.log(`Memory: ${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`);
+        readFileWithStream();
+    });
+}
+
+function readFileWithStream() {
+    const startTime = Date.now();
+    const readStream = fs.createReadStream('largefile.txt');
+    readStream.on('data', (chunk) => {});
+    readStream.on('end', () => {
+        const endTime = Date.now();
+        const memoryUsage = process.memoryUsage();
+        console.log('\n=== Stream Method ===');
+        console.log(`Time: ${endTime - startTime}ms`);
+        console.log(`Memory: ${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`);
+        const results = {
+            buffer: { time: `${endTime - startTime}ms`, memory: `${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB` },
+            stream: { time: `${endTime - startTime}ms`, memory: `${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB` }
+        };
+        fs.writeFileSync('benchmark-results.json', JSON.stringify(results, null, 2));
+    });
+}
+
+readFileWithBuffer();
+```
+
+**Save:** Ctrl+O → Enter → Ctrl+X
+
+**Run:** `node readFileBenchmark.js`
+
+---
+
+### Explanation
+**Buffer Method:** `fs.readFile` loads entire file into memory. Measures time and memory usage.
+
+**Stream Method:** `fs.createReadStream` reads file in chunks (more memory-efficient). Measures time and memory.
+
+**Output:** Both methods save results showing execution time and memory usage to `benchmark-results.json`.
