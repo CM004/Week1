@@ -18,13 +18,13 @@ log "Starting validation..."
 
 # Check if src/ exists
 if [ ! -d "src" ]; then
-  log "ERROR: src/ directory missing"
+  log "ERROR: 1 src/ directory missing"
   exit 1
 fi
 
 # Check if config.json exists and is valid JSON
 if [ ! -f "config.json" ]; then
-  log "ERROR: config.json not found"
+  log "ERROR: 2 config.json not found"
   exit 2
 fi
 
@@ -33,7 +33,7 @@ fi
 # >/dev/null 2>&1 → hides all output (both stdout and stderr).
 
 if ! python3 -m json.tool < config.json >/dev/null 2>&1; then
-  log "ERROR: config.json is not valid JSON"
+  log "ERROR: 3 config.json is not valid JSON"
   exit 3
 fi
 
