@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "mohan": "bash validate.sh && eslint . --fix && prettier --check ."
+    "mohan-check": "bash validate.sh && eslint . --max-warnings=0 && prettier --check ."
   },
   "keywords": [],
   "author": "",
