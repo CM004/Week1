@@ -110,13 +110,13 @@ default -> lts/* (-> v24.11.0)
 const os = require('os');
 const process = require('process');
 
-console.log(`OS: ${os.type()} ${os.release()}`);
-console.log(`Architecture: ${os.arch()}`);
-console.log(`CPU Cores: ${os.availableParallelism()}`);
-console.log(`Total Memory: ${(os.totalmem())} bytes`);
-console.log(`System Uptime: ${(os.uptime())} seconds`);
-console.log(`Current Logged User: ${os.userInfo().username}`);
-console.log(`Node Path: ${process.execPath}`);
+console.log('OS:',os.type());
+console.log('Architecture:',os.arch());
+console.log('CPU Cores:',os.cpus() ,'\nAll CPU Cores:',os.cpus().length);
+console.log('Total memory:',os.totalmem(),'Bytes');
+console.log('System Uptime:', os.uptime(),'Seconds');
+console.log('Current Logged User:',os.userInfo().username);
+console.log('Node Path:',process.execPath);
 ```
 
 **Save:** CTRL+O → Enter → CTRL+X
@@ -135,7 +135,6 @@ console.log(`Node Path: ${process.execPath}`);
 ---
 
 ### Step B: Create Benchmark Script
-**Create:** `nano readFileBenchmark.js`
 
 **Code:**
 ```javascript
@@ -197,7 +196,7 @@ readFileWithBuffer();
 
 **Save:** Ctrl+O → Enter → Ctrl+X
 
-**Run:** `node readFileBenchmark.js`
+**Run:** `node fileSystem.js`
 
 ---
 
@@ -206,4 +205,4 @@ readFileWithBuffer();
 
 **Stream Method:** `fs.createReadStream` reads file in chunks (more memory-efficient). Measures time and memory.
 
-**Output:** Both methods save results showing execution time and memory usage to `benchmark-results.json`.
+**Output:** Both methods save results showing execution time and memory usage to `day-1-perf.json`.
