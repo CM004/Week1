@@ -141,36 +141,56 @@ console.log(`Node Path: ${process.execPath}`);
 ```javascript
 const fs = require('fs');
 
-function readFileWithBuffer() {
-    const startTime = Date.now();
-    fs.readFile('largefile.txt', (err, data) => {
-        if (err) throw err;
-        const endTime = Date.now();
-        const memoryUsage = process.memoryUsage();
-        console.log('\n=== Buffer Method ===');
-        console.log(`Time: ${endTime - startTime}ms`);
-        console.log(`Memory: ${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`);
-        readFileWithStream();
-    });
-}
+const benchmarkReadFile = (callback) => {
+  const startMemory = process.memoryUsage().rss;
+  const start = Date.now();
 
-function readFileWithStream() {
-    const startTime = Date.now();
-    const readStream = fs.createReadStream('largefile.txt');
-    readStream.on('data', createReadStream(chunk) => {});
-    readStream.on('end', () => {
-        const endTime = Date.now();
-        const memoryUsage = process.memoryUsage();
-        console.log('\n=== Stream Method ===');
-        console.log(`Time: ${endTime - startTime}ms`);
-        console.log(`Memory: ${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`);
-        const results = {
-            buffer: { time: `${endTime - startTime}ms`, memory: `${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB` },
-            stream: { time: `${endTime - startTime}ms`, memory: `${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB` }
-        };
-        fs.writeFileSync('benchmark-results.json', JSON.stringify(results, null, 2));
+  fs.readFile(filePath, (err, data) => {
+    if (err) {
+      console.error('Error reading file:', err);
+      return;
+    }
+
+    const endMemory = process.memoryUsage().rss;
+    const end = Date.now();
+
+    results.readFile = {
+      time: end - start,
+      memory: endMemory - startMemory
+    };
+    console.log(
+      `Buffer (fs.readFile): { executionTime: ${results.readFile.time} ms, memoryUsed: ${results.readFile.memory} bytes }`
+    );
+
+    callback();
+  });
+};
+
+const benchmarkStreamFile = (callback) => {
+  const startMemory = process.memoryUsage().rss;
+  const start = Date.now();
+
+  fs.createReadStream(filePath)
+    .on('data', () => {}) // Consume data
+    .on('end', () => {
+      const endMemory = process.memoryUsage().rss;
+      const end = Date.now();
+
+      results.stream = {
+        time: end - start,
+        memory: endMemory - startMemory
+      };
+      console.log(
+        `Buffer (fs.createReadStream): { executionTime: ${results.stream.time} ms, memoryUsed: ${results.stream.memory} bytes }`
+      );
+
+      callback();
+    })
+    .on('error', (err) => {
+      console.error('Stream error:', err);
     });
-}
+};
+
 
 readFileWithBuffer();
 ```
