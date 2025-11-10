@@ -25,13 +25,15 @@
 **NOTES:** `echo` outputs variable value. `$SHELL` stores current shell path.
 
 **RESULT:** Using Bash shell at /bin/bash
+
 ![alt text](2.png)
+
 ---
 
 ### 1.c. Node Binary Path
 **INPUT:** `which node`
 
-**NOTES:** `which` shows executable location.
+**NOTES:** `which` shows executable location.`node`nodejs runtime command
 
 **RESULT:** /home/chandramohan/.nvm/versions/node/v24.11.0/bin/node
 ![alt text](3.png)
@@ -41,6 +43,11 @@
 **INPUT:** `npm root -g`
 
 **NOTES:** `npm root -g` prints global packages directory.
+`npm` → Node Package Manager (used to install, update, and manage Node.js packages).
+
+`root` → A subcommand that shows the root directory where npm installs packages.
+
+`-g (or --global)` → This flag tells npm to show the global installation directory instead of the local one`
 
 **RESULT:** /home/chandramohan/.nvm/versions/node/v24.11.0/lib/node_modules
 ![alt text](4.png)
@@ -56,9 +63,9 @@ done
 
 **NOTES:** Loop breaks $PATH into directories and lists those containing node/npm executables.
 
-**RESULT:** Main active version: /home/chandramohan/.nvm/versions/node/v24.11.0/bin/
+**RESULT:** 
 ![alt text](5.png)
-![alt text](9.png)
+
 ---
 
 ## 2. Node.js and NVM
@@ -76,7 +83,10 @@ default -> lts/* (-> v24.11.0)
 **NOTES:** `nvm ls` lists all installed Node.js versions and shows active one.
 
 **RESULT:** Active: v24.11.0 (LTS Krypton), Installed: v24.11.0 and v25.1.0
+
+![alt text](9.png)
 ![alt text](6.png)
+
 ---
 
 ### 2.b. Verify NVM Installation
@@ -120,7 +130,7 @@ console.log(`Node Path: ${process.execPath}`);
 ### Step A: Generate Test File
 **INPUT:** `dd if=/dev/urandom of=largefile.txt bs=1M count=50`
 
-**NOTES:** `dd` copies data. `if=/dev/urandom` uses random data. `bs=1M` sets 1MB blocks. `count=50` creates 50MB file.
+**NOTES:** `dd(data duplicator)` copies data. `if=/dev/urandom` special file in Unix-like systems that provides random binary data (pseudo-random bytes). `bs=1M` sets 1MB blocks. `count=50` creates 50MB file.
 
 ---
 
@@ -147,7 +157,7 @@ function readFileWithBuffer() {
 function readFileWithStream() {
     const startTime = Date.now();
     const readStream = fs.createReadStream('largefile.txt');
-    readStream.on('data', (chunk) => {});
+    readStream.on('data', createReadStream(chunk) => {});
     readStream.on('end', () => {
         const endTime = Date.now();
         const memoryUsage = process.memoryUsage();
