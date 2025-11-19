@@ -6,8 +6,8 @@ I also practiced creating accessible forms and explored media elements such as *
 To apply all the concepts, I built a simple blog layout using semantic elements only.
 
 **Preview (HTML without CSS)**  
- ![alt text](<screenshots/Pasted image.png>)
- ![alt text](<screenshots/Pasted image (2).png>)
+ ![alt text](<week2 screenshots/Pasted image.png>)
+ ![alt text](<week2 screenshots/Pasted image (2).png>)
 
 ---
 
@@ -17,9 +17,9 @@ I learned both **Flexbox** (1D layout) and **CSS Grid** (2D layout) and used the
 I also practiced media queries for mobile-first design and added basic transitions to make UI interactions smoother.
 
 **Flexbox Layout**   
- ![alt text](<screenshots/Pasted image (3).png>)
+ ![alt text](<week2 screenshots/Pasted image (3).png>)
 **Grid Layout**    
- ![alt text](<screenshots/Pasted image (4).png>)
+ ![alt text](<week2 screenshots/Pasted image (4).png>)
 ---
 
 ## Day 3 – JavaScript Basics + DOM Manipulation
@@ -30,9 +30,9 @@ I created an interactive FAQ section where clicking a question toggles its answe
 I also used events like `click`, `keydown`, and custom handlers to make components dynamic.
 
 **FAQ Accordion Examples**  
- ![alt text](<screenshots/Screenshot from 2025-11-19 14-45-56.png>) 
+ ![alt text](<week2 screenshots/Screenshot from 2025-11-19 14-45-56.png>) 
 
- ![alt text](<screenshots/Pasted image (5).png>)
+ ![alt text](<week2 screenshots/Pasted image (5).png>)
 ---
 
 ## Day 4 – Utilities, Debugging & LocalStorage Project
@@ -45,7 +45,7 @@ It included all essential features: **Add**, **Edit**, **Delete**, and **Mark Co
 I also implemented simple error handling using a `logs/errors.md` file.
 
 **Todo App Screen**  
- ![ screenshots/todo.png](screenshots/todo.png)
+ ![ week2 screenshots/todo.png](week2 screenshots/todo.png)
 ---
 
 ## Day 5 – E-commerce Product Listing Project
@@ -62,9 +62,9 @@ I built an **E-commerce product listing page** with:
 Products are fetched from DummyJSON and displayed with images, titles, and prices.
 
 **Product Listing Screenshots**  
- ![alt text](<screenshots/Screenshot from 2025-11-19 14-51-42.png>)
- ![alt text](<screenshots/Screenshot from 2025-11-19 14-52-54.png>)
- ![alt text](<screenshots/Screenshot from 2025-11-19 14-53-13.png>)
+ ![alt text](<week2 screenshots/Screenshot from 2025-11-19 14-51-42.png>)
+ ![alt text](<week2 screenshots/Screenshot from 2025-11-19 14-52-54.png>)
+ ![alt text](<week2 screenshots/Screenshot from 2025-11-19 14-53-13.png>)
 ---
 
 ## Summary
