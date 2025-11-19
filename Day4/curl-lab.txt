@@ -1,0 +1,459 @@
+Script started on 2025-11-07 13:09:27+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="184" LINES="45"]
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ [7mnslookup dummyjson.com[27mnslookup dummyjson.com[1@c[1@u[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lServer:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	dummyjson.com
+Address: 104.21.61.23
+Name:	dummyjson.com
+Address: 172.67.205.42
+Name:	dummyjson.com
+Address: 2606:4700:3031::ac43:cd2a
+Name:	dummyjson.com
+Address: 2606:4700:3033::6815:3d17
+
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ sudo apt install traceroute
+[?2004l[sudo] password for chandramohan: 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+traceroute is already the newest version (1:2.1.5-1).
+0 upgraded, 0 newly installed, 0 to remove and 162 not upgraded.
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ sudo traceroute dummyjson.com
+[?2004ltraceroute to dummyjson.com (104.21.61.23), 30 hops max, 60 byte packets
+ 1  _gateway (10.10.0.1)  7.795 ms  7.737 ms  7.753 ms
+ 2  203.122.42.45.reverse.spectranet.in (203.122.42.45)  8.386 ms  13.220 ms  9.352 ms
+ 3  * * *
+ 4  203.122.50.89.reverse.spectranet.in (203.122.50.89)  10.067 ms  10.381 ms  13.518 ms
+ 5  as13335.del.extreme-ix.net (45.120.248.27)  13.136 ms * *
+ 6  104.23.231.30 (104.23.231.30)  13.423 ms  6.531 ms  6.474 ms
+ 7  104.21.61.23 (104.21.61.23)  5.031 ms  4.533 ms *
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ [7mcurl -i "https://dummyjson.com/products?limit=5&skip=103"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl -i "https://dummyjson.com/products?limit=5&skip=103"[1P"[C
+[?2004lHTTP/2 200 
+[1mdate[0m: Fri, 07 Nov 2025 07:43:12 GMT
+[1mcontent-type[0m: application/json; charset=utf-8
+[1mserver[0m: cloudflare
+[1mx-ratelimit-limit[0m: 100
+[1mx-ratelimit-remaining[0m: 99
+[1mx-ratelimit-reset[0m: 1762501395
+[1mx-dns-prefetch-control[0m: off
+[1mx-frame-options[0m: SAMEORIGIN
+[1mstrict-transport-security[0m: max-age=15552000; includeSubDomains
+[1mx-download-options[0m: noopen
+[1mx-content-type-options[0m: nosniff
+[1mx-xss-protection[0m: 1; mode=block
+[1maccess-control-allow-origin[0m: *
+[1mx-powered-by[0m: Cats on Keyboards
+[1metag[0m: W/"2099-wgrTeGIpcU5lRWgPLkOvL75R1t8"
+[1mvary[0m: Accept-Encoding
+[1mreport-to[0m: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=n3R3LYcb4YL2DIhfrdKcfHCmWdQUtYsOgXa4OTGXY4ku0a4S5XNkd%2FRGZ%2BEDhgY69iUsUNdqpz9TbNUpiF79D2DeRLytWPv%2B2qiiZDI%3D"}]}
+[1mcf-cache-status[0m: DYNAMIC
+[1mnel[0m: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+[1mcf-ray[0m: 99ab32c65e04d14f-DEL
+
+{"products":[{"id":11,"title":"Annibale Colombo Bed","description":"The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.","category":"furniture","price":1899.99,"discountPercentage":8.57,"rating":4.77,"stock":88,"tags":["furniture","beds"],"brand":"Annibale Colombo","sku":"FUR-ANN-ANN-011","weight":10,"dimensions":{"width":28.16,"height":25.36,"depth":17.28},"warrantyInformation":"1 year warranty","shippingInformation":"Ships in 1 month","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Would not recommend!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Christopher West","reviewerEmail":"christopher.west@x.dummyjson.com"},{"rating":4,"comment":"Highly impressed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Vivian Carter","reviewerEmail":"vivian.carter@x.dummyjson.com"},{"rating":1,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Mason Wright","reviewerEmail":"mason.wright@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":1,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"3610757456581","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/2.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"},{"id":12,"title":"Annibale Colombo Sofa","description":"The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.","category":"furniture","price":2499.99,"discountPercentage":14.4,"rating":3.92,"stock":60,"tags":["furniture","sofas"],"brand":"Annibale Colombo","sku":"FUR-ANN-ANN-012","weight":6,"dimensions":{"width":12.75,"height":20.55,"depth":19.06},"warrantyInformation":"Lifetime warranty","shippingInformation":"Ships in 1 week","availabilityStatus":"In Stock","reviews":[{"rating":3,"comment":"Very unhappy with my purchase!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Christian Perez","reviewerEmail":"christian.perez@x.dummyjson.com"},{"rating":5,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Lillian Bishop","reviewerEmail":"lillian.bishop@x.dummyjson.com"},{"rating":1,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Lillian Simmons","reviewerEmail":"lillian.simmons@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":1,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"1777662847736","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/2.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp"},{"id":13,"title":"Bedside Table African Cherry","description":"The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.","category":"furniture","price":299.99,"discountPercentage":19.09,"rating":2.87,"stock":64,"tags":["furniture","bedside tables"],"brand":"Furniture Co.","sku":"FUR-FUR-BED-013","weight":2,"dimensions":{"width":13.47,"height":24.99,"depth":27.35},"warrantyInformation":"5 year warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":4,"comment":"Excellent quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Aaliyah Hanson","reviewerEmail":"aaliyah.hanson@x.dummyjson.com"},{"rating":4,"comment":"Excellent quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Liam Smith","reviewerEmail":"liam.smith@x.dummyjson.com"},{"rating":4,"comment":"Highly recommended!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Avery Barnes","reviewerEmail":"avery.barnes@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":3,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"6441287925979","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp","https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/2.webp","https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp"},{"id":14,"title":"Knoll Saarinen Executive Conference Chair","description":"The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.","category":"furniture","price":499.99,"discountPercentage":2.01,"rating":4.88,"stock":26,"tags":["furniture","office chairs"],"brand":"Knoll","sku":"FUR-KNO-KNO-014","weight":10,"dimensions":{"width":13.81,"height":7.5,"depth":5.62},"warrantyInformation":"2 year warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Waste of money!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Ella Cook","reviewerEmail":"ella.cook@x.dummyjson.com"},{"rating":2,"comment":"Very dissatisfied!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Clara Berry","reviewerEmail":"clara.berry@x.dummyjson.com"},{"rating":5,"comment":"Would buy again!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Elena Long","reviewerEmail":"elena.long@x.dummyjson.com"}],"returnPolicy":"60 days return policy","minimumOrderQuantity":5,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"8919386859966","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp","https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/2.webp","https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp"},{"id":15,"title":"Wooden Bathroom Sink With Mirror","description":"The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.","category":"furniture","price":799.99,"discountPercentage":8.8,"rating":3.59,"stock":7,"tags":["furniture","bathroom"],"brand":"Bath Trends","sku":"FUR-BAT-WOO-015","weight":10,"dimensions":{"width":7.98,"height":8.88,"depth":28.46},"warrantyInformation":"3 year warranty","shippingInformation":"Ships in 3-5 business days","availabilityStatus":"Low Stock","reviews":[{"rating":4,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Logan Torres","reviewerEmail":"logan.torres@x.dummyjson.com"},{"rating":5,"comment":"Very pleased!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Aria Parker","reviewerEmail":"aria.parker@x.dummyjson.com"},{"rating":3,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Dylan Wells","reviewerEmail":"dylan.wells@x.dummyjson.com"}],"returnPolicy":"60 days return policy","minimumOrderQuantity":2,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"1958104402873","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp","https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/2.webp","https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/thumbnail.webp"}],"total":194,"skip":10,"limit":5}[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ curl -v [7mcurl -i "https://dummyjson.com/products?limit=5&skip=103"[27mcurl -i "https://dummyjson.com/products?limit=5&skip=103"[1P"[C[1P"https://dummyjson.com/products?limit=5&skip=10"[1P"https://dummyjson.com/products?limit=5&skip=10"[1P"https://dummyjson.com/products?limit=5&skip=10"[1P"https://dummyjson.com/products?limit=5&skip=10"[1P"https://dummyjson.com/products?limit=5&skip=10"[1P"https://dummyjson.com/products?limit=5&skip=10"[1P"https://dummyjson.com/products?limit=5&skip=10"[1P"https://dummyjson.com/products?limit=5&skip=10"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l* Host dummyjson.com:443 was resolved.
+* IPv6: 2606:4700:3033::6815:3d17, 2606:4700:3031::ac43:cd2a
+* IPv4: 104.21.61.23, 172.67.205.42
+*   Trying 104.21.61.23:443...
+* Connected to dummyjson.com (104.21.61.23) port 443
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=dummyjson.com
+*  start date: Oct 16 12:48:12 2025 GMT
+*  expire date: Jan 14 13:46:43 2026 GMT
+*  subjectAltName: host "dummyjson.com" matched cert's "dummyjson.com"
+*  issuer: C=US; O=Google Trust Services; CN=WE1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+*   Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://dummyjson.com/products?limit=5&skip=10
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: dummyjson.com]
+* [HTTP/2] [1] [:path: /products?limit=5&skip=10]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+> GET /products?limit=5&skip=10 HTTP/2
+> Host: dummyjson.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* old SSL session ID is stale, removing
+< HTTP/2 200 
+< date: Fri, 07 Nov 2025 07:45:11 GMT
+< content-type: application/json; charset=utf-8
+< server: cloudflare
+< x-ratelimit-limit: 100
+< x-ratelimit-remaining: 99
+< x-ratelimit-reset: 1762501512
+< x-dns-prefetch-control: off
+< x-frame-options: SAMEORIGIN
+< strict-transport-security: max-age=15552000; includeSubDomains
+< x-download-options: noopen
+< x-content-type-options: nosniff
+< x-xss-protection: 1; mode=block
+< access-control-allow-origin: *
+< x-powered-by: Cats on Keyboards
+< etag: W/"2099-wgrTeGIpcU5lRWgPLkOvL75R1t8"
+< vary: Accept-Encoding
+< report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=1vDBgzkzP6dzT%2BwFMEvo9uCmOggn%2BHZLw%2FqZsPXKYtmic%2FgjI1wpnpcHNMm3VjYfmj5HYmbmHPD5m5VTP9wLj14iS%2BOwKrL0c1AN0IQ%3D"}]}
+< cf-cache-status: DYNAMIC
+< nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+< cf-ray: 99ab35adad078171-DEL
+< 
+{"products":[{"id":11,"title":"Annibale Colombo Bed","description":"The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.","category":"furniture","price":1899.99,"discountPercentage":8.57,"rating":4.77,"stock":88,"tags":["furniture","beds"],"brand":"Annibale Colombo","sku":"FUR-ANN-ANN-011","weight":10,"dimensions":{"width":28.16,"height":25.36,"depth":17.28},"warrantyInformation":"1 year warranty","shippingInformation":"Ships in 1 month","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Would not recommend!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Christopher West","reviewerEmail":"christopher.west@x.dummyjson.com"},{"rating":4,"comment":"Highly impressed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Vivian Carter","reviewerEmail":"vivian.carter@x.dummyjson.com"},{"rating":1,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Mason Wright","reviewerEmail":"mason.wright@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":1,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"3610757456581","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/2.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"},{"id":12,"title":"Annibale Colombo Sofa","description":"The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.","category":"furniture","price":2499.99,"discountPercentage":14.4,"rating":3.92,"stock":60,"tags":["furniture","sofas"],"brand":"Annibale Colombo","sku":"FUR-ANN-ANN-012","weight":6,"dimensions":{"width":12.75,"height":20.55,"depth":19.06},"warrantyInformation":"Lifetime warranty","shippingInformation":"Ships in 1 week","availabilityStatus":"In Stock","reviews":[{"rating":3,"comment":"Very unhappy with my purchase!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Christian Perez","reviewerEmail":"christian.perez@x.dummyjson.com"},{"rating":5,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Lillian Bishop","reviewerEmail":"lillian.bishop@x.dummyjson.com"},{"rating":1,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Lillian Simmons","reviewerEmail":"lillian.simmons@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":1,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"1777662847736","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/2.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp"},{"id":13,"title":"Bedside Table African Cherry","description":"The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.","category":"furniture","price":299.99,"discountPercentage":19.09,"rating":2.87,"stock":64,"tags":["furniture","bedside tables"],"brand":"Furniture Co.","sku":"FUR-FUR-BED-013","weight":2,"dimensions":{"width":13.47,"height":24.99,"depth":27.35},"warrantyInformation":"5 year warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":4,"comment":"Excellent quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Aaliyah Hanson","reviewerEmail":"aaliyah.hanson@x.dummyjson.com"},{"rating":4,"comment":"Excellent quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Liam Smith","reviewerEmail":"liam.smith@x.dummyjson.com"},{"rating":4,"comment":"Highly recommended!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Avery Barnes","reviewerEmail":"avery.barnes@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":3,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"6441287925979","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp","https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/2.webp","https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp"},{"id":14,"title":"Knoll Saarinen Executive Conference Chair","description":"The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.","category":"furniture","price":499.99,"discountPercentage":2.01,"rating":4.88,"stock":26,"tags":["furniture","office chairs"],"brand":"Knoll","sku":"FUR-KNO-KNO-014","weight":10,"dimensions":{"width":13.81,"height":7.5,"depth":5.62},"warrantyInformation":"2 year warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Waste of money!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Ella Cook","reviewerEmail":"ella.cook@x.dummyjson.com"},{"rating":2,"comment":"Very dissatisfied!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Clara Berry","reviewerEmail":"clara.berry@x.dummyjson.com"},{"rating":5,"comment":"Would buy again!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Elena Long","reviewerEmail":"elena.long@x.dummyjson.com"}],"returnPolicy":"60 days return policy","minimumOrderQuantity":5,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"8919386859966","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp","https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/2.webp","https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp"},{"id":15,"title":"Wooden Bathroom Sink With Mirror","description":"The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.","category":"furniture","price":799.99,"discountPercentage":8.8,"rating":3.59,"stock":7,"tags":["furniture","bathroom"],"brand":"Bath Trends","sku":"FUR-BAT-WOO-015","weight":10,"dimensions":{"width":7.98,"height":8.88,"depth":28.46},"warrantyInformation":"3 year warranty","shippingInformation":"Ships in 3-5 business days","availabilityStatus":"Low Stock","reviews":[{"rating":4,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Logan Torres","reviewerEmail":"logan.torres@x.dummyjson.com"},{"rating":5,"comment":"Very pleased!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Aria Parker","reviewerEmail":"aria.parker@x.dummyjson.com"},{"rating":3,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Dylan Wells","reviewerEmail":"dylan.wells@x.dummyjson.com"}],"returnPolicy":"60 days return policy","minimumOrderQuantity":2,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"1958104402873","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp","https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/2.webp","https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/3.w* Connection #0 to host dummyjson.com left intact
+ebp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/thumbnail.webp"}],"total":194,"skip":10,"limit":5}[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ [7mcurl -v \[27m
+[7m  -H "User-Agent:" \[27m
+[7m  -H "Authorization: Bearer faketoken123" \[27m
+[7m  "https://dummyjson.com/products?limit=5&skip=103"[27m[A[A[A]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ curl -v \
+  -H "User-Agent:" \
+  -H "Authorization: Bearer faketoken123" \
+  "https://dummyjson.com/products?limit=5&skip=103"[1P"[C
+[?2004l* Host dummyjson.com:443 was resolved.
+* IPv6: 2606:4700:3031::ac43:cd2a, 2606:4700:3033::6815:3d17
+* IPv4: 172.67.205.42, 104.21.61.23
+*   Trying 172.67.205.42:443...
+* Connected to dummyjson.com (172.67.205.42) port 443
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=dummyjson.com
+*  start date: Oct 16 12:48:12 2025 GMT
+*  expire date: Jan 14 13:46:43 2026 GMT
+*  subjectAltName: host "dummyjson.com" matched cert's "dummyjson.com"
+*  issuer: C=US; O=Google Trust Services; CN=WE1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+*   Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://dummyjson.com/products?limit=5&skip=10
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: dummyjson.com]
+* [HTTP/2] [1] [:path: /products?limit=5&skip=10]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [authorization: Bearer faketoken123]
+> GET /products?limit=5&skip=10 HTTP/2
+> Host: dummyjson.com
+> Accept: */*
+> Authorization: Bearer faketoken123
+> 
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* old SSL session ID is stale, removing
+< HTTP/2 200 
+< date: Fri, 07 Nov 2025 07:47:10 GMT
+< content-type: application/json; charset=utf-8
+< server: cloudflare
+< x-ratelimit-limit: 100
+< x-ratelimit-remaining: 99
+< x-ratelimit-reset: 1762501632
+< x-dns-prefetch-control: off
+< x-frame-options: SAMEORIGIN
+< strict-transport-security: max-age=15552000; includeSubDomains
+< x-download-options: noopen
+< x-content-type-options: nosniff
+< x-xss-protection: 1; mode=block
+< access-control-allow-origin: *
+< x-powered-by: Cats on Keyboards
+< etag: W/"2099-wgrTeGIpcU5lRWgPLkOvL75R1t8"
+< vary: Accept-Encoding
+< report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=JBfX1bbyb0P8PBbcLc9G7sPYx1YoGjxeS2Fcd2eBM%2FpNVdnScCqEHlJIanxMHox4qZL23j17VsVzXxdDSjL7LUmiCWoVBfhloHfsr9U%3D"}]}
+< cf-cache-status: DYNAMIC
+< nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+< cf-ray: 99ab3896ded58171-DEL
+< 
+{"products":[{"id":11,"title":"Annibale Colombo Bed","description":"The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.","category":"furniture","price":1899.99,"discountPercentage":8.57,"rating":4.77,"stock":88,"tags":["furniture","beds"],"brand":"Annibale Colombo","sku":"FUR-ANN-ANN-011","weight":10,"dimensions":{"width":28.16,"height":25.36,"depth":17.28},"warrantyInformation":"1 year warranty","shippingInformation":"Ships in 1 month","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Would not recommend!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Christopher West","reviewerEmail":"christopher.west@x.dummyjson.com"},{"rating":4,"comment":"Highly impressed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Vivian Carter","reviewerEmail":"vivian.carter@x.dummyjson.com"},{"rating":1,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Mason Wright","reviewerEmail":"mason.wright@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":1,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"3610757456581","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/2.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"},{"id":12,"title":"Annibale Colombo Sofa","description":"The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.","category":"furniture","price":2499.99,"discountPercentage":14.4,"rating":3.92,"stock":60,"tags":["furniture","sofas"],"brand":"Annibale Colombo","sku":"FUR-ANN-ANN-012","weight":6,"dimensions":{"width":12.75,"height":20.55,"depth":19.06},"warrantyInformation":"Lifetime warranty","shippingInformation":"Ships in 1 week","availabilityStatus":"In Stock","reviews":[{"rating":3,"comment":"Very unhappy with my purchase!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Christian Perez","reviewerEmail":"christian.perez@x.dummyjson.com"},{"rating":5,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Lillian Bishop","reviewerEmail":"lillian.bishop@x.dummyjson.com"},{"rating":1,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Lillian Simmons","reviewerEmail":"lillian.simmons@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":1,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"1777662847736","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/2.webp","https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp"},{"id":13,"title":"Bedside Table African Cherry","description":"The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.","category":"furniture","price":299.99,"discountPercentage":19.09,"rating":2.87,"stock":64,"tags":["furniture","bedside tables"],"brand":"Furniture Co.","sku":"FUR-FUR-BED-013","weight":2,"dimensions":{"width":13.47,"height":24.99,"depth":27.35},"warrantyInformation":"5 year warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":4,"comment":"Excellent quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Aaliyah Hanson","reviewerEmail":"aaliyah.hanson@x.dummyjson.com"},{"rating":4,"comment":"Excellent quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Liam Smith","reviewerEmail":"liam.smith@x.dummyjson.com"},{"rating":4,"comment":"Highly recommended!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Avery Barnes","reviewerEmail":"avery.barnes@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":3,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"6441287925979","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp","https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/2.webp","https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp"},{"id":14,"title":"Knoll Saarinen Executive Conference Chair","description":"The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.","category":"furniture","price":499.99,"discountPercentage":2.01,"rating":4.88,"stock":26,"tags":["furniture","office chairs"],"brand":"Knoll","sku":"FUR-KNO-KNO-014","weight":10,"dimensions":{"width":13.81,"height":7.5,"depth":5.62},"warrantyInformation":"2 year warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Waste of money!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Ella Cook","reviewerEmail":"ella.cook@x.dummyjson.com"},{"rating":2,"comment":"Very dissatisfied!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Clara Berry","reviewerEmail":"clara.berry@x.dummyjson.com"},{"rating":5,"comment":"Would buy again!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Elena Long","reviewerEmail":"elena.long@x.dummyjson.com"}],"returnPolicy":"60 days return policy","minimumOrderQuantity":5,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"8919386859966","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp","https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/2.webp","https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp"},{"id":15,"title":"Wooden Bathroom Sink With Mirror","description":"The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.","category":"furniture","price":799.99,"discountPercentage":8.8,"rating":3.59,"stock":7,"tags":["furniture","bathroom"],"brand":"Bath Trends","sku":"FUR-BAT-WOO-015","weight":10,"dimensions":{"width":7.98,"height":8.88,"depth":28.46},"warrantyInformation":"3 year warranty","shippingInformation":"Ships in 3-5 business days","availabilityStatus":"Low Stock","reviews":[{"rating":4,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Logan Torres","reviewerEmail":"logan.torres@x.dummyjson.com"},{"rating":5,"comment":"Very pleased!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Aria Parker","reviewerEmail":"aria.parker@x.dummyjson.com"},{"rating":3,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Dylan Wells","reviewerEmail":"dylan.wells@x.dummyjson.com"}],"returnPolicy":"60 days return policy","minimumOrderQuantity":2,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"1958104402873","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp","https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/2.webp","https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/3.w* Connection #0 to host dummyjson.com left intact
+ebp"],"thumbnail":"https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/thumbnail.webp"}],"total":194,"skip":10,"limit":5}[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ [7mcurl -v "https://dummyjson.com/products?limit=5&skip=10"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl -v "https://dummyjson.com/products?limit=5&skip=10"  -H "User-Agent:"   -H "Authorization: Bearer faketoken123"   "https://dummyjson.com/products?limit=5&skip=10"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[63P"https://dummyjson.com/products?limit=5&skip=10"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mcurl -v "https://dummyjson.com/products?limit=5&skip=10"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl -v "https://dummyjson.com/products?limit=5&skip=10"[C[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Products?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[1Pproducts?limit=5&skip=10"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C > normal.txt
+[?2004l[?2004h> 
+[?2004l[?2004h> ^C[?2004l[?2004h[?2004l
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ products?limit=5&skip=10" > normal.txt
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl -v   -H "User-Agent:"   -H "Authorization: Bearer faketoken123"   "https://dummyjson.com/products?limit=5&skip=10"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\ "https://dummyjson.com/products?limit=5&skip=10"[C "https://dummyjson.com/products?limit=5&skip=10"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C .[K> fake.txt [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kt
+[?2004l* URL rejected: Malformed input to a URL function
+* Closing connection
+curl: (3) URL rejected: Malformed input to a URL function
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host dummyjson.com:443 was resolved.
+* IPv6: 2606:4700:3033::6815:3d17, 2606:4700:3031::ac43:cd2a
+* IPv4: 172.67.205.42, 104.21.61.23
+*   Trying 172.67.205.42:443...
+* Connected to dummyjson.com (172.67.205.42) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [19 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2534 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=dummyjson.com
+*  start date: Oct 16 12:48:12 2025 GMT
+*  expire date: Jan 14 13:46:43 2026 GMT
+*  subjectAltName: host "dummyjson.com" matched cert's "dummyjson.com"
+*  issuer: C=US; O=Google Trust Services; CN=WE1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+*   Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://dummyjson.com/products?limit=5&skip=10
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: dummyjson.com]
+* [HTTP/2] [1] [:path: /products?limit=5&skip=10]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [authorization: Bearer faketoken123]
+} [5 bytes data]
+> GET /products?limit=5&skip=10 HTTP/2
+> Host: dummyjson.com
+> Accept: */*
+> Authorization: Bearer faketoken123
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [230 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [230 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+< HTTP/2 200 
+< date: Fri, 07 Nov 2025 07:53:05 GMT
+< content-type: application/json; charset=utf-8
+< server: cloudflare
+< x-ratelimit-limit: 100
+< x-ratelimit-remaining: 99
+< x-ratelimit-reset: 1762501988
+< x-dns-prefetch-control: off
+< x-frame-options: SAMEORIGIN
+< strict-transport-security: max-age=15552000; includeSubDomains
+< x-download-options: noopen
+< x-content-type-options: nosniff
+< x-xss-protection: 1; mode=block
+< access-control-allow-origin: *
+< x-powered-by: Cats on Keyboards
+< etag: W/"2099-wgrTeGIpcU5lRWgPLkOvL75R1t8"
+< vary: Accept-Encoding
+< report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=t2fFSp8yDqPC94RP9robqVLX%2Bd360SLMPMUMkud9kyml6JzgcdbINwvaaEGLX6la3fnMGlIeHj1NwszBUkKOBcJRanawswsgaNYLpDs%3D"}]}
+< cf-cache-status: DYNAMIC
+< nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+< cf-ray: 99ab4140dd2bc1c5-DEL
+< 
+{ [8345 bytes data]
+100  8345    0  8345    0     0  13213      0 --:--:-- --:--:-- --:--:-- 13204100  8345    0  8345    0     0  13209      0 --:--:-- --:--:-- --:--:-- 13204
+* Connection #0 to host dummyjson.com left intact
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ diff normal.txt fake.txt
+[?2004ldiff: normal.txt: No such file or directory
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ [7mcurl -i "https://dummyjson.com/products?limit=5&skip=103" > normal.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl -i "https://dummyjson.com/products?limit=5&skip=103" > normal.txt[1P[1P[1@v[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host dummyjson.com:443 was resolved.
+* IPv6: 2606:4700:3031::ac43:cd2a, 2606:4700:3033::6815:3d17
+* IPv4: 104.21.61.23, 172.67.205.42
+*   Trying 104.21.61.23:443...
+* Connected to dummyjson.com (104.21.61.23) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [19 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2534 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=dummyjson.com
+*  start date: Oct 16 12:48:12 2025 GMT
+*  expire date: Jan 14 13:46:43 2026 GMT
+*  subjectAltName: host "dummyjson.com" matched cert's "dummyjson.com"
+*  issuer: C=US; O=Google Trust Services; CN=WE1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+*   Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://dummyjson.com/products?limit=5&skip=10
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: dummyjson.com]
+* [HTTP/2] [1] [:path: /products?limit=5&skip=10]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+} [5 bytes data]
+> GET /products?limit=5&skip=10 HTTP/2
+> Host: dummyjson.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [230 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [230 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+< HTTP/2 200 
+< date: Fri, 07 Nov 2025 07:54:00 GMT
+< content-type: application/json; charset=utf-8
+< server: cloudflare
+< x-ratelimit-limit: 100
+< x-ratelimit-remaining: 99
+< x-ratelimit-reset: 1762502045
+< x-dns-prefetch-control: off
+< x-frame-options: SAMEORIGIN
+< strict-transport-security: max-age=15552000; includeSubDomains
+< x-download-options: noopen
+< x-content-type-options: nosniff
+< x-xss-protection: 1; mode=block
+< access-control-allow-origin: *
+< x-powered-by: Cats on Keyboards
+< etag: W/"2099-wgrTeGIpcU5lRWgPLkOvL75R1t8"
+< vary: Accept-Encoding
+< report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=uOnri14R3quIyBginGpAtUHTJ2cKXMmcZ0vuSCrbXYwyIJphvYxycZF5d8uIgM6G0n0YNH16tmZY8lS%2BvYvdlCaztTzgXiYXj04dz84%3D"}]}
+< cf-cache-status: DYNAMIC
+< nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+< cf-ray: 99ab429abed691ec-DEL
+< 
+{ [8345 bytes data]
+100  8345    0  8345    0     0  16609      0 --:--:-- --:--:-- --:--:-- 16590
+* Connection #0 to host dummyjson.com left intact
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ dii[Kff noraml.txt fake.txt
+[?2004ldiff: noraml.txt: No such file or directory
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ diff normal.txt fake.txt
+[?2004l[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ diff normal.txt fake.txt .[K> difference.txt
+[?2004l[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ [7mcurl -i "https://dummyjson.com/products?limit=5&skip=0"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl -i "https://dummyjson.com/products?limit=5&skip=0"
+[?2004lHTTP/2 200 
+[1mdate[0m: Fri, 07 Nov 2025 08:01:46 GMT
+[1mcontent-type[0m: application/json; charset=utf-8
+[1mserver[0m: cloudflare
+[1mx-ratelimit-limit[0m: 100
+[1mx-ratelimit-remaining[0m: 99
+[1mx-ratelimit-reset[0m: 1762502508
+[1mx-dns-prefetch-control[0m: off
+[1mx-frame-options[0m: SAMEORIGIN
+[1mstrict-transport-security[0m: max-age=15552000; includeSubDomains
+[1mx-download-options[0m: noopen
+[1mx-content-type-options[0m: nosniff
+[1mx-xss-protection[0m: 1; mode=block
+[1maccess-control-allow-origin[0m: *
+[1mx-powered-by[0m: Cats on Keyboards
+[1metag[0m: W/"1cf6-vKLgOnINYP3dn8/IH5KH5MkT1tI"
+[1mvary[0m: Accept-Encoding
+[1mreport-to[0m: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=SR5%2Fz6WKKXNMUaYMGh7IM99tIL301r%2BlcM56Hn8CNAUbv7e%2Bzp80ZPDQ%2FLP9zRpEHgIBeQcIrKJNmFJECYAZj%2BFKTSRShsSDTkJuZGg%3D"}]}
+[1mcf-cache-status[0m: DYNAMIC
+[1mnel[0m: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+[1mcf-ray[0m: 99ab4df6dda991ec-DEL
+
+{"products":[{"id":1,"title":"Essence Mascara Lash Princess","description":"The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.","category":"beauty","price":9.99,"discountPercentage":10.48,"rating":2.56,"stock":99,"tags":["beauty","mascara"],"brand":"Essence","sku":"BEA-ESS-ESS-001","weight":4,"dimensions":{"width":15.14,"height":13.08,"depth":22.99},"warrantyInformation":"1 week warranty","shippingInformation":"Ships in 3-5 business days","availabilityStatus":"In Stock","reviews":[{"rating":3,"comment":"Would not recommend!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Eleanor Collins","reviewerEmail":"eleanor.collins@x.dummyjson.com"},{"rating":4,"comment":"Very satisfied!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Lucas Gordon","reviewerEmail":"lucas.gordon@x.dummyjson.com"},{"rating":5,"comment":"Highly impressed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Eleanor Collins","reviewerEmail":"eleanor.collins@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":48,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"5784719087687","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"},{"id":2,"title":"Eyeshadow Palette with Mirror","description":"The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.","category":"beauty","price":19.99,"discountPercentage":18.19,"rating":2.86,"stock":34,"tags":["beauty","eyeshadow"],"brand":"Glamour Beauty","sku":"BEA-GLA-EYE-002","weight":9,"dimensions":{"width":9.26,"height":22.47,"depth":27.67},"warrantyInformation":"1 year warranty","shippingInformation":"Ships in 2 weeks","availabilityStatus":"In Stock","reviews":[{"rating":5,"comment":"Great product!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Savannah Gomez","reviewerEmail":"savannah.gomez@x.dummyjson.com"},{"rating":4,"comment":"Awesome product!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Christian Perez","reviewerEmail":"christian.perez@x.dummyjson.com"},{"rating":1,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Nicholas Bailey","reviewerEmail":"nicholas.bailey@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":20,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"9170275171413","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"},{"id":3,"title":"Powder Canister","description":"The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.","category":"beauty","price":14.99,"discountPercentage":9.84,"rating":4.64,"stock":89,"tags":["beauty","face powder"],"brand":"Velvet Touch","sku":"BEA-VEL-POW-003","weight":8,"dimensions":{"width":29.27,"height":27.93,"depth":20.59},"warrantyInformation":"3 months warranty","shippingInformation":"Ships in 1-2 business days","availabilityStatus":"In Stock","reviews":[{"rating":4,"comment":"Would buy again!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Alexander Jones","reviewerEmail":"alexander.jones@x.dummyjson.com"},{"rating":5,"comment":"Highly impressed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Elijah Cruz","reviewerEmail":"elijah.cruz@x.dummyjson.com"},{"rating":1,"comment":"Very dissatisfied!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Avery Perez","reviewerEmail":"avery.perez@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":22,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"8418883906837","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp"},{"id":4,"title":"Red Lipstick","description":"The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.","category":"beauty","price":12.99,"discountPercentage":12.16,"rating":4.36,"stock":91,"tags":["beauty","lipstick"],"brand":"Chic Cosmetics","sku":"BEA-CHI-LIP-004","weight":1,"dimensions":{"width":18.11,"height":28.38,"depth":22.17},"warrantyInformation":"3 year warranty","shippingInformation":"Ships in 1 week","availabilityStatus":"In Stock","reviews":[{"rating":4,"comment":"Great product!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Liam Garcia","reviewerEmail":"liam.garcia@x.dummyjson.com"},{"rating":5,"comment":"Great product!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Ruby Andrews","reviewerEmail":"ruby.andrews@x.dummyjson.com"},{"rating":5,"comment":"Would buy again!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Clara Berry","reviewerEmail":"clara.berry@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":40,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"9467746727219","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp"},{"id":5,"title":"Red Nail Polish","description":"The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.","category":"beauty","price":8.99,"discountPercentage":11.44,"rating":4.32,"stock":79,"tags":["beauty","nail polish"],"brand":"Nail Couture","sku":"BEA-NAI-NAI-005","weight":8,"dimensions":{"width":21.63,"height":16.48,"depth":29.84},"warrantyInformation":"1 month warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Benjamin Wilson","reviewerEmail":"benjamin.wilson@x.dummyjson.com"},{"rating":5,"comment":"Great product!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Liam Smith","reviewerEmail":"liam.smith@x.dummyjson.com"},{"rating":1,"comment":"Very unhappy with my purchase!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Clara Berry","reviewerEmail":"clara.berry@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":22,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"4063010628104","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp"}],"total":194,"skip":0,"limit":5}[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ curl -i "https://dummyjson.com/products?limit=5&skip=0"[C[1P"5"[C
+[?2004lHTTP/2 200 
+[1mdate[0m: Fri, 07 Nov 2025 08:02:04 GMT
+[1mcontent-type[0m: application/json; charset=utf-8
+[1mserver[0m: cloudflare
+[1mx-ratelimit-limit[0m: 100
+[1mx-ratelimit-remaining[0m: 99
+[1mx-ratelimit-reset[0m: 1762502528
+[1mx-dns-prefetch-control[0m: off
+[1mx-frame-options[0m: SAMEORIGIN
+[1mstrict-transport-security[0m: max-age=15552000; includeSubDomains
+[1mx-download-options[0m: noopen
+[1mx-content-type-options[0m: nosniff
+[1mx-xss-protection[0m: 1; mode=block
+[1maccess-control-allow-origin[0m: *
+[1mx-powered-by[0m: Cats on Keyboards
+[1metag[0m: W/"1fc7-whttUY6fsu1zUOFTJeJFgvv4ziU"
+[1mvary[0m: Accept-Encoding
+[1mreport-to[0m: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=0KbPzfACHPod%2BWYBZlJWVodJGb3IySf0f6qAV1fdcovtqBtC0cMzAEJrAReRuuZFEi4VESUXgt9dZiFhFwbKWOnj8eZZDet0Bm31sk0%3D"}]}
+[1mcf-cache-status[0m: DYNAMIC
+[1mnel[0m: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+[1mcf-ray[0m: 99ab4e6b6e3bd7e5-DEL
+
+{"products":[{"id":6,"title":"Calvin Klein CK One","description":"CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.","category":"fragrances","price":49.99,"discountPercentage":1.89,"rating":4.37,"stock":29,"tags":["fragrances","perfumes"],"brand":"Calvin Klein","sku":"FRA-CAL-CAL-006","weight":7,"dimensions":{"width":29.36,"height":27.76,"depth":20.72},"warrantyInformation":"1 week warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Very disappointed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Layla Young","reviewerEmail":"layla.young@x.dummyjson.com"},{"rating":4,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Daniel Cook","reviewerEmail":"daniel.cook@x.dummyjson.com"},{"rating":3,"comment":"Not as described!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Jacob Cooper","reviewerEmail":"jacob.cooper@x.dummyjson.com"}],"returnPolicy":"90 days return policy","minimumOrderQuantity":9,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"2451534060749","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp","https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/2.webp","https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/thumbnail.webp"},{"id":7,"title":"Chanel Coco Noir Eau De","description":"Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.","category":"fragrances","price":129.99,"discountPercentage":16.51,"rating":4.26,"stock":58,"tags":["fragrances","perfumes"],"brand":"Chanel","sku":"FRA-CHA-CHA-007","weight":7,"dimensions":{"width":24.5,"height":25.7,"depth":25.98},"warrantyInformation":"3 year warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":4,"comment":"Highly impressed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Ruby Andrews","reviewerEmail":"ruby.andrews@x.dummyjson.com"},{"rating":5,"comment":"Awesome product!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Leah Henderson","reviewerEmail":"leah.henderson@x.dummyjson.com"},{"rating":5,"comment":"Very happy with my purchase!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Xavier Wright","reviewerEmail":"xavier.wright@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":1,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"4091737746820","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/1.webp","https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/2.webp","https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/thumbnail.webp"},{"id":8,"title":"Dior J'adore","description":"J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.","category":"fragrances","price":89.99,"discountPercentage":14.72,"rating":3.8,"stock":98,"tags":["fragrances","perfumes"],"brand":"Dior","sku":"FRA-DIO-DIO-008","weight":4,"dimensions":{"width":27.67,"height":28.28,"depth":11.83},"warrantyInformation":"1 week warranty","shippingInformation":"Ships in 2 weeks","availabilityStatus":"In Stock","reviews":[{"rating":5,"comment":"Great value for money!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Nicholas Bailey","reviewerEmail":"nicholas.bailey@x.dummyjson.com"},{"rating":4,"comment":"Great value for money!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Penelope Harper","reviewerEmail":"penelope.harper@x.dummyjson.com"},{"rating":4,"comment":"Great product!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Emma Miller","reviewerEmail":"emma.miller@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":10,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"1445086097250","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/1.webp","https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/2.webp","https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp"},{"id":9,"title":"Dolce Shine Eau de","description":"Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.","category":"fragrances","price":69.99,"discountPercentage":0.62,"rating":3.96,"stock":4,"tags":["fragrances","perfumes"],"brand":"Dolce & Gabbana","sku":"FRA-DOL-DOL-009","weight":6,"dimensions":{"width":27.28,"height":29.88,"depth":18.3},"warrantyInformation":"3 year warranty","shippingInformation":"Ships in 1 month","availabilityStatus":"Low Stock","reviews":[{"rating":4,"comment":"Would buy again!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Mateo Bennett","reviewerEmail":"mateo.bennett@x.dummyjson.com"},{"rating":4,"comment":"Highly recommended!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Nolan Gonzalez","reviewerEmail":"nolan.gonzalez@x.dummyjson.com"},{"rating":5,"comment":"Very happy with my purchase!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Aurora Lawson","reviewerEmail":"aurora.lawson@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":2,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"3023868210708","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/1.webp","https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/2.webp","https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp"},{"id":10,"title":"Gucci Bloom Eau de","description":"Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.","category":"fragrances","price":79.99,"discountPercentage":14.39,"rating":2.74,"stock":91,"tags":["fragrances","perfumes"],"brand":"Gucci","sku":"FRA-GUC-GUC-010","weight":7,"dimensions":{"width":20.92,"height":21.68,"depth":11.2},"warrantyInformation":"6 months warranty","shippingInformation":"Ships overnight","availabilityStatus":"In Stock","reviews":[{"rating":1,"comment":"Very dissatisfied!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Cameron Perez","reviewerEmail":"cameron.perez@x.dummyjson.com"},{"rating":5,"comment":"Very happy with my purchase!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Daniel Cook","reviewerEmail":"daniel.cook@x.dummyjson.com"},{"rating":4,"comment":"Highly impressed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Addison Wright","reviewerEmail":"addison.wright@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":2,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"3170832177880","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/1.webp","https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/2.webp","https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp"}],"total":194,"skip":5,"limit":5}[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ curl -i "https://dummyjson.com/products?limit=5&skip=5"15"05"[C[C
+[?2004lHTTP/2 200 
+[1mdate[0m: Fri, 07 Nov 2025 08:02:46 GMT
+[1mcontent-type[0m: application/json; charset=utf-8
+[1mserver[0m: cloudflare
+[1mx-ratelimit-limit[0m: 100
+[1mx-ratelimit-remaining[0m: 99
+[1mx-ratelimit-reset[0m: 1762502567
+[1mx-dns-prefetch-control[0m: off
+[1mx-frame-options[0m: SAMEORIGIN
+[1mstrict-transport-security[0m: max-age=15552000; includeSubDomains
+[1mx-download-options[0m: noopen
+[1mx-content-type-options[0m: nosniff
+[1mx-xss-protection[0m: 1; mode=block
+[1maccess-control-allow-origin[0m: *
+[1mx-powered-by[0m: Cats on Keyboards
+[1metag[0m: W/"2098-rTE3eUuRqO9Ao/vDHnC2IFL38bY"
+[1mvary[0m: Accept-Encoding
+[1mreport-to[0m: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=vjEsMSL%2FKUTfRnAY9NLGNBqED4WkpaFP%2Bh5gScE5%2FUBKhl4Sth6XNJ6J0HoZ924%2B5Okot5R9mA%2BLvgU%2Bd4z5fs%2FocCNgzpmI371tcEs%3D"}]}
+[1mcf-cache-status[0m: DYNAMIC
+[1mnel[0m: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+[1mcf-ray[0m: 99ab4f6c6a909cd7-DEL
+
+{"products":[{"id":106,"title":"Apple Watch Series 4 Gold","description":"The Apple Watch Series 4 in Gold is a stylish and advanced smartwatch with features like heart rate monitoring, fitness tracking, and a beautiful Retina display.","category":"mobile-accessories","price":349.99,"discountPercentage":12.02,"rating":2.74,"stock":33,"tags":["electronics","smartwatches"],"brand":"Apple","sku":"MOB-APP-APP-106","weight":6,"dimensions":{"width":27.69,"height":28.03,"depth":7.11},"warrantyInformation":"6 months warranty","shippingInformation":"Ships in 1 month","availabilityStatus":"In Stock","reviews":[{"rating":3,"comment":"Very unhappy with my purchase!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Chloe Morales","reviewerEmail":"chloe.morales@x.dummyjson.com"},{"rating":4,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Ava Harrison","reviewerEmail":"ava.harrison@x.dummyjson.com"},{"rating":4,"comment":"Would buy again!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Nicholas Bailey","reviewerEmail":"nicholas.bailey@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":3,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"3921248718888","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/1.webp","https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/2.webp","https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/3.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/thumbnail.webp"},{"id":107,"title":"Beats Flex Wireless Earphones","description":"The Beats Flex Wireless Earphones offer a comfortable and versatile audio experience. With magnetic earbuds and up to 12 hours of battery life, they are ideal for everyday use.","category":"mobile-accessories","price":49.99,"discountPercentage":5.73,"rating":4.24,"stock":50,"tags":["electronics","wireless earphones"],"brand":"Beats","sku":"MOB-BEA-BEA-107","weight":8,"dimensions":{"width":17.86,"height":25.74,"depth":23.09},"warrantyInformation":"1 year warranty","shippingInformation":"Ships in 1-2 business days","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Disappointing product!","date":"2025-04-30T09:41:02.053Z","reviewerName":"William Gonzalez","reviewerEmail":"william.gonzalez@x.dummyjson.com"},{"rating":5,"comment":"Very pleased!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Gabriel Mitchell","reviewerEmail":"gabriel.mitchell@x.dummyjson.com"},{"rating":2,"comment":"Not worth the price!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Gabriel Adams","reviewerEmail":"gabriel.adams@x.dummyjson.com"}],"returnPolicy":"7 days return policy","minimumOrderQuantity":17,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"1741271692174","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/1.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/thumbnail.webp"},{"id":108,"title":"iPhone 12 Silicone Case with MagSafe Plum","description":"The iPhone 12 Silicone Case with MagSafe in Plum is a stylish and protective case designed for the iPhone 12. It features MagSafe technology for easy attachment of accessories.","category":"mobile-accessories","price":29.99,"discountPercentage":13.85,"rating":3.62,"stock":69,"tags":["electronics","phone accessories"],"brand":"Apple","sku":"MOB-APP-IPH-108","weight":7,"dimensions":{"width":12.49,"height":11.29,"depth":23.52},"warrantyInformation":"3 months warranty","shippingInformation":"Ships in 3-5 business days","availabilityStatus":"In Stock","reviews":[{"rating":2,"comment":"Would not buy again!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Penelope King","reviewerEmail":"penelope.king@x.dummyjson.com"},{"rating":5,"comment":"Great value for money!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Isabella Anderson","reviewerEmail":"isabella.anderson@x.dummyjson.com"},{"rating":5,"comment":"Highly recommended!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Claire Foster","reviewerEmail":"claire.foster@x.dummyjson.com"}],"returnPolicy":"90 days return policy","minimumOrderQuantity":4,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"8156838251449","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/1.webp","https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/2.webp","https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/3.webp","https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/4.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp"},{"id":109,"title":"Monopod","description":"The Monopod is a versatile camera accessory for stable and adjustable shooting. Perfect for capturing selfies, group photos, and videos with ease.","category":"mobile-accessories","price":19.99,"discountPercentage":8.58,"rating":4.43,"stock":48,"tags":["electronics","camera accessories"],"brand":"TechGear","sku":"MOB-TEC-MON-109","weight":10,"dimensions":{"width":8.8,"height":12.93,"depth":21.1},"warrantyInformation":"1 year warranty","shippingInformation":"Ships in 1-2 business days","availabilityStatus":"In Stock","reviews":[{"rating":1,"comment":"Not worth the price!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Max Parker","reviewerEmail":"max.parker@x.dummyjson.com"},{"rating":4,"comment":"Highly recommended!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Maya Reed","reviewerEmail":"maya.reed@x.dummyjson.com"},{"rating":5,"comment":"Fast shipping!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Mila Hernandez","reviewerEmail":"mila.hernandez@x.dummyjson.com"}],"returnPolicy":"60 days return policy","minimumOrderQuantity":30,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"2915346477518","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/1.webp","https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/2.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/thumbnail.webp"},{"id":110,"title":"Selfie Lamp with iPhone","description":"The Selfie Lamp with iPhone is a portable and adjustable LED light designed to enhance your selfies and video calls. Attach it to your iPhone for well-lit photos.","category":"mobile-accessories","price":14.99,"discountPercentage":19.4,"rating":3.55,"stock":58,"tags":["electronics","selfie accessories"],"brand":"GadgetMaster","sku":"MOB-GAD-SEL-110","weight":10,"dimensions":{"width":5.26,"height":13.84,"depth":22.83},"warrantyInformation":"Lifetime warranty","shippingInformation":"Ships in 2 weeks","availabilityStatus":"In Stock","reviews":[{"rating":4,"comment":"Highly recommended!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Luke Cooper","reviewerEmail":"luke.cooper@x.dummyjson.com"},{"rating":3,"comment":"Poor quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Caleb Perkins","reviewerEmail":"caleb.perkins@x.dummyjson.com"},{"rating":4,"comment":"Highly recommended!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Benjamin Wilson","reviewerEmail":"benjamin.wilson@x.dummyjson.com"}],"returnPolicy":"60 days return policy","minimumOrderQuantity":22,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"4372781189895","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/1.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/thumbnail.webp"}],"total":194,"skip":105,"limit":5}[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day4[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day4[00m$ exit
+[?2004lexit
+
+Script done on 2025-11-07 13:36:15+05:30 [COMMAND_EXIT_CODE="0"]
