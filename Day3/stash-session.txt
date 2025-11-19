@@ -1,0 +1,65 @@
+Script started on 2025-11-07 02:16:09+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="184" LINES="45"]
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ exitgit bisect badexit[K[Kgit status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   app.js[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mbisect-session.txt[m
+	[31mstash-session.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git stash
+[?2004lSaved working directory and index state WIP on main: ec6c7e8 Revert "introduced bug (replaced + with -) in addition"
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git pull orign [K[Ki main[K[K[K[K[Kn main
+[?2004lFrom https://github.com/CM004/Day3
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git stasg[Kh apply
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   app.js[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mbisect-session.txt[m
+	[31mstash-session.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   app.js[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mbisect-session.txt[m
+	[31mstash-session.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git commit . [K[K[K[K[K[K[K[K[Kadd .
+[?2004l[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git o[Kcommit -m "[7mreapply local edits to app.js after stash[27mreapply local edits to app.js after stash[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1@c[1@h[1@a[1@n[1@g[1@e[1@s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"
+[?2004l[main c1c2344] apply local changes to app.js after stash
+ 3 files changed, 45 insertions(+)
+ create mode 100644 bisect-session.txt
+ create mode 100644 stash-session.txt
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git status
+[?2004lOn branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ [7mecho "// temp change" >> index.js[27m

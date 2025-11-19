@@ -1,0 +1,42 @@
+Script started on 2025-11-07 01:29:11+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="184" LINES="45"]
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git bisect start
+[?2004lstatus: waiting for both good and bad commits
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ node sum.js
+[?2004lsum: [33m0[39m
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git bisect bad
+[?2004lstatus: waiting for good commit(s), bad commit known
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git log[K[K[K[K[K[K[Kgit bisect bad[3Pnode sum.jsgit bisect startlog[Kstatusnode test.js[1Psum.js[1Pgit status[2Ppushcommit -m "Ignore package files"[18Padd .gitignorecommit -m "Ignore package files"push[Kstatusnode sum.jstest.js[2Pgit status[3Plogbisect start[5Pnode sum.jsgit bisect bad[Kgit bisect bad[3Pnode sum.jsgit bisect startlog[K[K[K[Klog --oneline --graph --decorate --all
+[?2004l[?1h=* [33mfc0d103[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Added another text file[m
+* [33mf8d3f95[m Added text file[m
+* [33m221a114[m Added .gitignore file[m
+* [33mb90f7f3[m Added readme file[m
+* [33mca9419b[m introduced bug (replaced + with -) in addition[m
+* [33m8c23514[m Added test.js for testing addition[m
+* [33m57a9748[m Added simple addition program[m
+* [33m7ea7bd6[m Added a file[m
+[K[?1l>[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git bisect good [7m8c23514[27m8c23514
+[?2004lBisecting: 2 revisions left to test after this (roughly 1 step)
+[b90f7f3b60c67a72281abbce3e870d6bdd6264e3] Added readme file
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git sum.js
+[?2004lgit: 'sum.js' is not a git command. See 'git --help'.
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ node sume[K.js
+[?2004lsum: [33m0[39m
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git bisect bad
+[?2004lBisecting: 0 revisions left to test after this (roughly 0 steps)
+[ca9419bab443fa0a448a0401772c8cabfe7bcf04] introduced bug (replaced + with -) in addition
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git bise[K[K[K[K[K[K[K[Knode sum.js
+[?2004lsum: [33m0[39m
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ git bisect bad
+[?2004lca9419bab443fa0a448a0401772c8cabfe7bcf04 is the first bad commit
+[33mcommit ca9419bab443fa0a448a0401772c8cabfe7bcf04[m
+Author: Chandramohan <senchandramohan2018@gmail.com>
+Date:   Thu Nov 6 19:38:57 2025 +0530
+
+    introduced bug (replaced + with -) in addition
+
+ sum.js | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[?2004h]0;chandramohan@hestabit-Latitude-3450: ~/Desktop/Day3[01;32mchandramohan@hestabit-Latitude-3450[00m:[01;34m~/Desktop/Day3[00m$ exit
+[?2004lexit
+
+Script done on 2025-11-07 01:35:43+05:30 [COMMAND_EXIT_CODE="0"]
