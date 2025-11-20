@@ -1,0 +1,20 @@
+export default function Navbar(){
+    return(
+        <nav className="flex items-center justify-between p-4 bg-gray-700">
+  <button id="menu-btn"
+   className="text-2xl  text-white hover:text-gray-500 cursor-pointer">☰</button>
+  <h1 className="text-4xl text-white font-extrabold">My App</h1>
+  <input 
+    type="search" 
+    placeholder="Search..." 
+    className="border p-2 rounded w-32 md:w-50  text-white "
+  />
+  <img 
+    src="profile.png" 
+    alt="profile" 
+    className="w-8 h-8 rounded-full hover: cursor-pointer"
+  />
+</nav>
+
+    );
+}
