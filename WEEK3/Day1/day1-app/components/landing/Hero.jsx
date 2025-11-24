@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const heroBlur =
   "data:image/svg+xml;utf8," +
@@ -9,9 +11,26 @@ const heroBlur =
 
 export default function Hero() {
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-b from-blue-50 to-white">
-      <div className="container mx-auto px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
-        <div className="w-full lg:w-1/2">
+    <section className="pt-24 pb-16 relative overflow-hidden">
+      {/* Animated gradient background */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to bottom right, rgb(219, 234, 254), rgb(165, 243, 252), rgb(248, 250, 252))',
+          backgroundSize: '200% 200%',
+          animation: 'gradientWave 8s ease infinite'
+        }}
+      />
+      
+      {/* Content */}
+      <div className="relative container mx-auto px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
+        {/* Text content with fade-in animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="w-full lg:w-1/2"
+        >
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-slate-900">
             Supercharge Your Workflow
           </h1>
@@ -33,9 +52,15 @@ export default function Hero() {
               Reviews
             </Link>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-full lg:w-1/2">
+        {/* Image with fade-in and slide animation */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="w-full lg:w-1/2"
+        >
           <div className="relative w-full h-64 sm:h-80 lg:h-96">
             <Image
               src="/hero-.jpg"
@@ -48,8 +73,20 @@ export default function Hero() {
               blurDataURL={heroBlur}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Inline keyframes animation */}
+      <style jsx>{`
+        @keyframes gradientWave {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+      `}</style>
     </section>
   );
 }
