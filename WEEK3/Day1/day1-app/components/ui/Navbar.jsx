@@ -28,7 +28,7 @@ export default function Navbar({onMenuClick}){
           <Button 
           size="sm" 
           type="primary" 
-          className="rounded ml-4 hover:cursor-pointer flex items-center gap-2" 
+          className="rounded-lg ml-4 hover:cursor-pointer flex items-center gap-2" 
           onClick={() => setIsLoginOpen(true)}>
 
             <img 
