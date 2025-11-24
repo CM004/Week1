@@ -10,7 +10,7 @@ export default function Userprofile() {
             alt="Profile"
             width={200}
             height={200}
-            className= "object-cover w-48 h-48 ml-25"
+            className= "object-cover w-48 h-48"
           />
         </div>
         <div className="flex flex-col md:flex-row w-full justify-between">

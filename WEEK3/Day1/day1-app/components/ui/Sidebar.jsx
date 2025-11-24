@@ -1,8 +1,21 @@
 import Link from "next/link";
 import { FaTachometerAlt, FaProjectDiagram, FaCog, FaUser, FaUsers,FaInfoCircle } from "react-icons/fa";
-export default function Sidebar() {
+export default function Sidebar({isOpen, onClose}) {
   return (
-    <aside id="sidebar" className="h-screen w-48 bg-gray-800 text-white p-4">
+    <div>
+    {isOpen && (
+        <div 
+          className="fixed inset-0"
+          onClick={onClose}
+        />
+      )}
+      
+      <aside 
+        className={`fixed lg:static h-screen w-50 bg-gray-800 text-white p-4 transition-transform duration-250 
+          ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+        }`}
+      >
+    {/* <aside id="sidebar" className="h-screen w-48 bg-gray-800 text-white p-4"> */}
 
       <div className="mb-6">
         <h2 className="text-4xl underline decoration-indigo-400 font-bold">Menu</h2>
@@ -31,5 +44,6 @@ export default function Sidebar() {
             <Link href="/about" className="flex items-center gap-2 hover:text-gray-300 cursor-pointer text-2xl mb-6 font-semibold"><FaInfoCircle/>About Us</Link></li>
      </ul>
     </aside>
+    </div>
   );
 }
