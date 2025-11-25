@@ -13,14 +13,7 @@ export default function Hero() {
   return (
     <section className="pt-24 pb-16 relative overflow-hidden">
       {/* Animated gradient background */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(to bottom right, rgb(219, 234, 254), rgb(165, 243, 252), rgb(248, 250, 252))',
-          backgroundSize: '200% 200%',
-          animation: 'gradientWave 8s ease infinite'
-        }}
-      />
+      <div className="absolute inset-0 bg-linear-to-br from-purple-300 via-cyan-300 to-blue-300 animate-gradient-wave" />
       
       {/* Content */}
       <div className="relative container mx-auto px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
@@ -75,18 +68,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
-      {/* Inline keyframes animation */}
-      <style jsx>{`
-        @keyframes gradientWave {
-          0%, 100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-      `}</style>
     </section>
   );
 }
