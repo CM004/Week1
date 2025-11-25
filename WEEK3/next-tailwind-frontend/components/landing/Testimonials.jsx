@@ -36,7 +36,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="reviews" className="py-16 bg-gradient-to-b from-slate-300 to-white">
+    <section id="reviews" className="py-16 bg-linear-to-b from-slate-300 to-white">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Animated headings */}
         <motion.h2

@@ -3,7 +3,7 @@ import "./globals.css";
 import LayoutClient from "./clientlayout";
 
 export const metadata = {
-  title: "Week 3 Day1 App",
+  title: "Week 3 Mini Capstone Project",
   description: "This is my first Next.js project with tailwindcss",
 };
 

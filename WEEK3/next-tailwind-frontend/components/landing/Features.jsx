@@ -28,7 +28,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
+    <section id="features" className="py-16 bg-linear-to-b from-gray-50 to-gray-100">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Animated headings */}
         <motion.h2
