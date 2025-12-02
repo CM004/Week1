@@ -1,11 +1,17 @@
 const userService = require('../services/user-services');
 const logger = require("../utils/logger");
+const {sendWelcomeEmail} = require("../jobs/email.job")
 
 class UserController {
   async createUser(req, res, next) {
   try {
     logger.info('Creating user', { requestId: req.requestId });
     const newUser = await userService.createUser(req.body);
+
+    sendWelcomeEmail(newUser, req.requestId).catch(err => 
+        logger.error('Email queue failed', { requestId: req.requestId })
+      );
+
     res.status(201).json({ success: true, data: newUser });
   } catch (error) {
     next(error);
