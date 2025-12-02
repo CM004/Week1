@@ -2,14 +2,16 @@ const winston = require('winston');
 const path = require('path');
 
 // Simple format - just the message
-const simpleFormat = winston.format.printf(({ message }) => {
-  return message;
+const simpleFormat = winston.format.printf(({ message, requestId }) => {
+    const id = requestId ? `[${requestId}]` : '';
+    return `${id} ${message}`;
 });
 
 // Format with timestamp for file
-const fileFormat = winston.format.printf(({ message }) => {
+const fileFormat = winston.format.printf(({ message, requestId }) => {
   const timestamp = new Date().toString();
-  return `${timestamp} - ${message}`;
+  const id = requestId ? `[${requestId}]` : '';
+  return `${timestamp} ${id} - ${message}`;
 });
 
 // Create logger
