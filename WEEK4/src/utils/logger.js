@@ -16,7 +16,8 @@ const fileFormat = winston.format.printf(({ message, requestId }) => {
 
 // Create logger
 const logger = winston.createLogger({
-  transports: [
+    format: winston.format.json(),
+    transports: [
     // Console output (no timestamp)
     new winston.transports.Console({
       format: simpleFormat,
